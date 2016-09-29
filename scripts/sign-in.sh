@@ -18,6 +18,4 @@ curl --include --request POST http://localhost:3000/sign-in \
 
 
 
-    curl --include --request POST http://localhost:3000/games --header "Content-Type: application/json" --data '{
-    "zombie": 20
-    }'
+    curl --include --request GET http://localhost:3000/games --header "Content-Type: application/json"

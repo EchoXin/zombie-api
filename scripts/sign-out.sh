@@ -4,5 +4,5 @@ curl --include --request DELETE http://localhost:3000/sign-out/$ID \
   --header "Authorization: Token token=$TOKEN"
 
 
-  curl --include --request DELETE http://localhost:3000/mygames \
-    --header "Authorization: Token token=BAhJIiViYjk0NzVkMGQ5YmRkMDE0NDQ1YTdjMTg5MzU4NTEyMAY6BkVG--7f59d7a1c71d6939c96f31b4bb25b5ed389bf6a3"
+  curl --include --request DELETE http://localhost:3000/games \
+    --header "Authorization: Token token=BAhJIiU5NjVkYTUxYzEzZTMxNjNiZGJkNzZmY2QzNzAyZjg0MQY6BkVG--710ced5cc4216ae180fdab073a387394b92b25be"
