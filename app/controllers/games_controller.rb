@@ -4,11 +4,10 @@ class GamesController < OpenReadController
   # GET /games
   # GET /games.json
   def index
-    @games = Game.all
+    @games = Game.all.order(:zombie).reverse_order.limit(10)
 
     render json: @games
   end
-
 
 
   # GET /games/1
@@ -21,8 +20,15 @@ class GamesController < OpenReadController
   # POST /games.json
 
   def show_by_user
-    @game = current_user.games
+    @games = current_user.games.order(:zombie)
     render json: @games
+  end
+
+  def delete_all
+    @games = current_user.games.order(:zombie)
+    @games.destroy_all
+
+    head :no_content
   end
 
   def create
